@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>ZentBuy spreadsheet | Einkaufscheck vor der Bestellung</title>
+  <meta name="description" content="Der deutsche Ratgeber zum ZentBuy spreadsheet: Produktlinks prüfen, Größen vergleichen, QC-Fotos lesen und den Versand vorbereiten. Mit Kategorien bei Cafans.">
+  <meta name="theme-color" content="#103b39">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="ZentBuy spreadsheet | Einkaufscheck vor der Bestellung">
+  <meta property="og:description" content="Deutschsprachiger Einkaufsratgeber mit Kategorien bei Cafans, Maßvergleich, Fotocheck und Versandplanung.">
+  <meta property="og:image" content="https://static.nike.com/a/images/w_640,f_auto,q_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b18d3d86-7257-4e9b-8aa8-5f9d5b3d92b9/AIR+MAX+90.png">
+  <meta property="og:image:alt" content="Weißer Nike Air Max 90 von der Seite">
+  <link rel="icon" href="https://www.cafans.com/favicon.ico">
+  <link rel="preconnect" href="https://static.nike.com">
+  <!-- Recherche: Bing lieferte für die exakte Suchanfrage keine organischen Treffer. Für Suchabsicht und Themenstruktur wurden stattdessen zehn erreichbare Domains geprüft: Repsheet, zentbuy-spreadsheets.com, ChinaGrails, zentbuyspreadsheet.com, zentbuy.org, SSFinds, Mixfittio, Achi Finds, GosmoFinds und sopel.fit. -->
+  <!-- Suchthemen für die Redaktion
+       Nebenkeywords: ZentBuy Produktlinks prüfen, Größentabellen vergleichen, ZentBuy QC-Fotos beurteilen, ZentBuy Versand vorbereiten.
+       Longtails: Weidian-Produktlink prüfen, Taobao-Angebot vergleichen, 1688-Produktseite prüfen, Agentenlink umwandeln, ursprüngliche Artikelnummer finden, Sneaker-Größentabelle lesen, Fußlänge messen, Einlegesohlenlänge vergleichen, Hoodie-Passform prüfen, Brustweite und Rückenlänge messen, Ärmellänge einer Jacke vergleichen, Kopfumfang für eine Cap messen, beide Sneaker-Fersen prüfen, Sohlenprofil vergleichen, T-Shirt-Druck im Detail prüfen, Innenweite eines Armreifs messen, Lagerfoto einer Variante zuordnen, Versandfreigabe vorbereiten, mehrere Artikel in einem Paket bündeln, Volumengewicht prüfen, Inlandsversand und Auslandsversand erfassen, Versand nach Deutschland planen, Versand nach Österreich vergleichen, Versand in die Schweiz vorbereiten. -->
+  <style>
+    :root{color-scheme:light;--ink:#102f2d;--dark:#103b39;--paper:#f6f2e9;--light:#fffdf8;--line:#b9c8bd;--muted:#385751;--accent:#ffc78c}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    a{color:inherit}
+    a:focus-visible,summary:focus-visible{outline:3px solid #ad420a;outline-offset:4px}
+    .mast a:focus-visible{outline-color:var(--accent)}
+    .wrap{width:min(70rem,calc(100% - 2rem));margin-inline:auto}
+    h1,h2,h3,p,figure,dl,dd{margin:0}
+    h1,h2,h3{line-height:1.12;text-wrap:balance}
+    h1{font-size:clamp(2.55rem,6.4vw,5.4rem);letter-spacing:-.055em}
+    h2{font-size:clamp(1.65rem,4vw,2.6rem);letter-spacing:-.035em}
+    h3{font-size:1.24rem}
+    .mast{background:var(--dark);color:var(--light)}
+    .bar,.foot{display:flex;justify-content:space-between;align-items:center;gap:.5rem 1.2rem;flex-wrap:wrap}
+    .bar{padding-block:.75rem;border-bottom:1px solid #74928d}
+    .brand{font-weight:800;text-decoration:none}
+    .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+    .mast .eyebrow{color:var(--accent)}
+    .intro{padding-block:clamp(1.45rem,4.5vw,3.4rem)}
+    .intro p{max-width:72ch;margin-top:.75rem}
+    .browse{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:clamp(1rem,3vw,2.5rem);padding-block:1.4rem 0;align-items:start}
+    .category-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:1rem 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+    .category-list li{border-bottom:1px solid var(--line)}
+    .category-list li:nth-child(odd){border-right:1px solid var(--line)}
+    .category-list a{display:flex;justify-content:space-between;align-items:center;gap:.4rem;min-height:2.8rem;height:100%;padding:.45rem .65rem;font-weight:740;text-decoration:none}
+    .category-list a:hover,.category-list a:focus-visible{background:#e0ece3}
+    .hero-photo{background:#e8e7e4;overflow:hidden}
+    img{display:block;width:100%;height:auto}
+    .hero-photo img{aspect-ratio:1.5;object-fit:cover;object-position:50% 59%}
+    figcaption,.note{color:var(--muted);font-size:.88rem}
+    figcaption{margin-top:.35rem}
+    .section{margin-top:clamp(2rem,5vw,4rem)}
+    .section h2+.note,.browse h2+.note{margin-top:.4rem}
+    .articles{margin-top:1rem;border-top:2px solid var(--dark)}
+    .articles article{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:.55rem 1.5rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+    .articles article p+p{margin-top:.55rem}
+    .field-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:1rem;background:var(--line);border:1px solid var(--line)}
+    .field-list div{background:var(--light);padding:.85rem}
+    dt{font-weight:800}
+    .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;margin-top:1rem}
+    .gallery img{aspect-ratio:1;object-fit:contain;background:#eae8e4}
+    .faq{max-width:53rem;margin-top:1rem;border-top:1px solid var(--line)}
+    details{border-bottom:1px solid var(--line)}
+    summary{padding:.75rem 0;cursor:pointer;font-weight:780}
+    details p{padding:0 0 .9rem 1rem}
+    footer{margin-top:clamp(2rem,5vw,4rem);padding-block:1.15rem;border-top:1px solid var(--line)}
+    @media(max-width:44rem){
+      .browse,.articles article{grid-template-columns:1fr}
+      .field-list,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .hero-photo img{aspect-ratio:2}
+    }
+    @media(max-width:24rem){.category-list a{font-size:.91rem;overflow-wrap:anywhere}.field-list{grid-template-columns:1fr}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "name":"ZentBuy spreadsheet",
+    "description":"Deutschsprachiger Einkaufsratgeber zu Produktlinks, Größen, QC-Fotos und Versandplanung.",
+    "mainEntity":[
+      {"@type":"Question","name":"Was ist ein ZentBuy spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Das ist eine sortierte Sammlung von Produktlinks für die Suche nach Artikeln, die sich über einen Einkaufsagenten bestellen lassen. Die Kategorien auf dieser Seite führen zum Katalog von Cafans."}},
+      {"@type":"Question","name":"Wie erkenne ich, ob ein Produktlink noch aktuell ist?","acceptedAnswer":{"@type":"Answer","text":"Öffne das aktuelle Angebot und vergleiche Artikelnummer, Farbe und Größe mit deiner Merkliste. Wenn die passende Variante fehlt oder der Link zu einem anderen Artikel führt, suche erneut nach der ursprünglichen Artikelnummer."}},
+      {"@type":"Question","name":"Was zeigen QC-Fotos?","acceptedAnswer":{"@type":"Answer","text":"QC-Fotos sind Bilder eines Artikels zur Sichtprüfung. Prüfe, ob die Fotos zur bestellten Variante gehören, und bitte bei fehlenden Details um eine Nahaufnahme oder ein Foto mit Maßband."}},
+      {"@type":"Question","name":"Welche Maße sollte ich vor der Bestellung vergleichen?","acceptedAnswer":{"@type":"Answer","text":"Vergleiche bei Schuhen die Fußlänge mit der Tabelle des Angebots. Bei Kleidung helfen die flach gemessene Brustweite, die Rückenlänge und die Ärmellänge eines gut sitzenden Stücks."}},
+      {"@type":"Question","name":"Wie plane ich den Versand nach Deutschland, Österreich oder in die Schweiz?","acceptedAnswer":{"@type":"Answer","text":"Wähle zuerst das Zielland und prüfe dann beim Anbieter die verfügbaren Versandarten, die Berechnung nach Gewicht oder Paketmaßen und mögliche zusätzliche Kosten. Rechne Artikelpreis, Gebühren und Versand für deine eigene Bestellung zusammen."}}
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/pyvec/">
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap">
+      <div class="bar">
+        <a class="brand" href="https://www.cafans.com">www.cafans.com</a>
+        <p class="eyebrow">Einkaufsratgeber · Deutsch</p>
+      </div>
+      <div class="intro">
+        <h1>ZentBuy spreadsheet</h1>
+        <p>Ein Spreadsheet bündelt Produktlinks, damit du Artikel schneller findest und Varianten vergleichen kannst. Dieser unabhängige Ratgeber zeigt dir, welche Angaben du vor der Bestellung prüfen solltest. Die Kategorien führen zum Katalog von Cafans.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="browse">
+      <nav aria-labelledby="kategorien">
+        <h2 id="kategorien">Kategorien bei Cafans</h2>
+        <p class="note">Wähle die passende Warengruppe für deine Suche.</p>
+        <ul class="category-list">
+          <li><a href="https://cafans.com/category-911-Shoes.html">Schuhe <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Hoodies und Pullover <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cafans.com/category-913-T-Shirts.html">T-Shirts <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cafans.com/category-914-Jackets.html">Jacken <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cafans.com/category-915-Pants%2FShorts.html">Hosen und Shorts <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cafans.com/category-916-Headwear.html">Kopfbedeckungen <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cafans.com/category-917-Sets.html">Bekleidungssets <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cafans.com/category-918-underwear%2Funderpants.html">Unterwäsche <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cafans.com/category-919-Jersey.html">Trikots <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://cafans.com/category-920-Accessories.html">Accessoires <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </nav>
+      <figure>
+        <div class="hero-photo">
+          <img src="https://static.nike.com/a/images/w_640,f_auto,q_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b18d3d86-7257-4e9b-8aa8-5f9d5b3d92b9/AIR+MAX+90.png" width="640" height="800" loading="eager" fetchpriority="high" alt="Weißer Nike Air Max 90 von der Seite mit sichtbarem Luftpolster in der Ferse">
+        </div>
+        <figcaption>Nike Air Max 90 · Beispiel einer Seitenansicht für den Sohlenvergleich.</figcaption>
+      </figure>
+    </div>
+
+    <section class="section" aria-labelledby="ratgeber">
+      <h2 id="ratgeber">Vier Schritte für deine Einkaufsliste</h2>
+      <div class="articles">
+        <article>
+          <h3>01 · ZentBuy Produktlinks prüfen</h3>
+          <div>
+            <p>Übernimm bei einem Weidian-Produktlink die Artikelnummer in deine Merkliste. Bei einem Taobao-Angebot oder einer 1688-Produktseite lohnt sich ein Blick in die Variantenauswahl. Ähnliche Vorschaubilder können zu verschiedenen Farben oder Ausführungen gehören.</p>
+            <p>Wenn du einen Agentenlink umwandeln willst, öffne anschließend das neue Angebot und gleiche Artikelnummer und Modell ab. Notiere beim Vergleich von zwei Angeboten auch den Namen des jeweiligen Händlers.</p>
+          </div>
+        </article>
+        <article>
+          <h3>02 · Größentabellen vergleichen</h3>
+          <div>
+            <p>Miss für die Sneaker-Größentabelle beide Füße im Stehen und verwende die längere Fußlänge. Wenn ein Angebot die Einlegesohlenlänge nennt, prüfe, welche Messmethode der Händler dafür verwendet.</p>
+            <p>Für die Hoodie-Passform sind Brustweite und Rückenlänge eines gut sitzenden Hoodies eine praktische Referenz. Bei einer Jacke hilft zusätzlich die Ärmellänge. Bei einer Cap mit verstellbarem Verschluss vergleichst du deinen Kopfumfang mit dem angegebenen Einstellbereich.</p>
+          </div>
+        </article>
+        <article>
+          <h3>03 · ZentBuy QC-Fotos beurteilen</h3>
+          <div>
+            <p>Bitte beim Sneaker-Check um ein Bild von beiden Fersen und eine Aufnahme der Sohlen. Bei einem T-Shirt helfen Nahaufnahmen von Kragen und Druck. Für einen Armreif sind ein Maßfoto der Innenweite und ein Detailbild des Verschlusses nützlich.</p>
+            <p>Halte bei jedem Lagerfoto fest, zu welcher Artikelvariante es gehört. Vergleiche Farben möglichst bei neutralem Licht und kläre Abweichungen vor der Versandfreigabe.</p>
+          </div>
+        </article>
+        <article>
+          <h3>04 · ZentBuy Versand vorbereiten</h3>
+          <div>
+            <p>Wenn du mehrere Artikel in einem Paket bündeln möchtest, frage nach dem Gewicht und den Maßen des verpackten Pakets. Prüfe bei der gewählten Versandart, ob das tatsächliche Paketgewicht oder das Volumengewicht für die Berechnung gilt.</p>
+            <p>Vergleiche die Versandoptionen für Deutschland, Österreich oder die Schweiz anhand des tatsächlichen Ziels. Erfasse Artikelpreis, Inlandsversand, Agentengebühren und Auslandsversand getrennt und prüfe mögliche Einfuhrkosten für deine Sendung.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="merkliste">
+      <h2 id="merkliste">Sechs Felder für einen Produktvergleich</h2>
+      <p class="note">Lege pro Farb- und Größenvariante eine eigene Zeile an. So bleiben Maßangaben und Fotos eindeutig zugeordnet.</p>
+      <dl class="field-list">
+        <div><dt>Händler und Original-Link</dt><dd>Marktplatz, Händlername und Artikelnummer festhalten.</dd></div>
+        <div><dt>Modell und Farbvariante</dt><dd>Die genaue Bezeichnung aus dem Angebot übernehmen.</dd></div>
+        <div><dt>Größe und Sollmaß</dt><dd>Den Größenwert mit Einheit und Messmethode notieren.</dd></div>
+        <div><dt>QC-Foto und offene Frage</dt><dd>Zum Beispiel Sohlenprofil sichtbar, Fersenansicht fehlt.</dd></div>
+        <div><dt>Paketdaten und Kosten</dt><dd>Gewicht, Außenmaße und offene Versandkosten erfassen.</dd></div>
+        <div><dt>Datum der Linkprüfung</dt><dd>Vor der Bestellung Variante und Verfügbarkeit erneut prüfen.</dd></div>
+      </dl>
+    </section>
+
+    <section class="section" aria-labelledby="bildbeispiele">
+      <h2 id="bildbeispiele">Bildbeispiele für den Detailcheck</h2>
+      <p class="note">Die Markenfotos zeigen, welche Ansichten beim Vergleichen helfen.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/113J698A0531C989_SBG_E01-1?wid=400&amp;hei=500&amp;fmt=jpeg" width="400" height="500" loading="lazy" decoding="async" alt="Schwarzer Dior CD Icon Hoodie mit Kordelzug auf einem Kleiderbügel">
+          <figcaption>Dior · Kapuzenform und Bündchen.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1761588034/857593_3HBIO_9066_001_100_0000_Light-baseballkappe-aus-ggcanvas.jpg" width="490" height="490" loading="lazy" decoding="async" alt="Weiße Gucci-Baseballkappe aus GG-Canvas in schräger Vorderansicht">
+          <figcaption>Gucci · Schirmform und Besatz.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-speedy-bandouliere-25-monogram-handbags--M41113_PM2_Front%20view.png?wid=400&amp;hei=400&amp;fmt=jpeg" width="400" height="400" loading="lazy" decoding="async" alt="Braune Louis Vuitton Speedy Bandoulière 25 mit Monogramm, hellen Griffen und Schulterriemen">
+          <figcaption>Louis Vuitton · Griffe und Riemenansatz.</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.hermes.com/is/image/hermesproduct/700001FO31_front_wm_101?wid=360&amp;hei=480&amp;fit=fit&amp;$product_default_bg$" width="360" height="480" loading="lazy" decoding="async" alt="Hermès Clic H Armreif mit weißer Emaille und roségoldfarbenem H-Verschluss">
+          <figcaption>Hermès · Emaille und H-Verschluss.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="fragen">
+      <h2 id="fragen">Häufige Fragen</h2>
+      <div class="faq">
+        <details open>
+          <summary>Was ist ein ZentBuy spreadsheet?</summary>
+          <p>Das ist eine sortierte Sammlung von Produktlinks für die Suche nach Artikeln, die sich über einen Einkaufsagenten bestellen lassen. Die Kategorien auf dieser Seite führen zum Katalog von Cafans.</p>
+        </details>
+        <details>
+          <summary>Wie erkenne ich, ob ein Produktlink noch aktuell ist?</summary>
+          <p>Öffne das aktuelle Angebot und vergleiche Artikelnummer, Farbe und Größe mit deiner Merkliste. Wenn die passende Variante fehlt oder der Link zu einem anderen Artikel führt, suche erneut nach der ursprünglichen Artikelnummer.</p>
+        </details>
+        <details>
+          <summary>Was zeigen QC-Fotos?</summary>
+          <p>QC-Fotos sind Bilder eines Artikels zur Sichtprüfung. Prüfe, ob die Fotos zur bestellten Variante gehören, und bitte bei fehlenden Details um eine Nahaufnahme oder ein Foto mit Maßband.</p>
+        </details>
+        <details>
+          <summary>Welche Maße sollte ich vor der Bestellung vergleichen?</summary>
+          <p>Vergleiche bei Schuhen die Fußlänge mit der Tabelle des Angebots. Bei Kleidung helfen die flach gemessene Brustweite, die Rückenlänge und die Ärmellänge eines gut sitzenden Stücks.</p>
+        </details>
+        <details>
+          <summary>Wie plane ich den Versand nach Deutschland, Österreich oder in die Schweiz?</summary>
+          <p>Wähle zuerst das Zielland und prüfe dann beim Anbieter die verfügbaren Versandarten, die Berechnung nach Gewicht oder Paketmaßen und mögliche zusätzliche Kosten. Rechne Artikelpreis, Gebühren und Versand für deine eigene Bestellung zusammen.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <p class="note">Unabhängiger Einkaufsratgeber · Markenfotos dienen der Veranschaulichung.</p>
+      <a class="brand" href="https://www.cafans.com">Zum Cafans-Katalog</a>
+    </div>
+  </footer>
+</body>
+</html>
